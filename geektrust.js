@@ -1,10 +1,16 @@
 // Declaring dependencies.
-
+const fs = require('fs');
 
 
 
 // Getting input from textfile , taking the location to the textfile as a parameter.
-const filename = process.argv[2];
+const inputFile = process.argv[2];
+
+fs.readFile(inputFile, 'utf8', function(err, data) {  //using fs module to read commands from input file
+    if (err) throw err;
+    console.log(data);
+});
+
 
 
 
