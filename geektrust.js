@@ -21,15 +21,28 @@ let reader = new FileReader();
     for(let line = 0; line < lines.length; line++){
       inputLine = line.split("")  //creating an array of single words of each line
 
-      if (inputLine[0] == 'ALLOCATE'){}
+      if (inputLine[0] == 'ALLOCATE'){
+        moneyObject = commands(parseFloat(inputLine[1]),parseFloat(inputLine[2]),parseFloat(inputLine[3]))
+      }
                  
-      else if (inputLine[0] == 'SIP'){}
+      else if (inputLine[0] == 'SIP'){
+        moneyObject.SIP(parseFloat(inputLine[1]),parseFloat(inputLine[2]),parseFloat(inputLine[3]))
+      }
                   
-      else if (inputLine[0] == 'CHANGE'){}
+      else if (inputLine[0] == 'CHANGE'){
+        moneyObject.CHANGE( parseFloat(inputLine[1]).toFixed(2)+"%", // Change string to % float
+                            parseFloat(inputLine[2]).toFixed(2)+"%", 
+                            parseFloat(inputLine[3]).toFixed(2)+"%", 
+                            inputLine[4],monthCount) 
+      }
 
-      else if (inputLine[0] == 'BALANCE'){}
+      else if (inputLine[0] == 'BALANCE'){
+        moneyObject.BALANCE(inputLine[1]) //stil a string
+      }
                        
-      else if (inputLine[0] == 'REBALANCE'){}
+      else if (inputLine[0] == 'REBALANCE'){
+        moneyObject.REBALANCE()
+      }
             
     }
   };
