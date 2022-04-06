@@ -1,6 +1,8 @@
-const dfd = require("danfojs-node")
+
 class commands{
+  
     constructor(equity,debt,gold){
+        const dfd = require("danfojs")
         this.equity = equity;
         this.debt = debt;
         this.gold = gold;
@@ -11,7 +13,7 @@ class commands{
         this.debtAlloc = debt * 100 / (equity + debt + gold);
         this.goldAlloc = gold * 100 / (equity + debt + gold);
         this.moneyDf = new dfd.DataFrame({"columns": ["equity", "debt", "gold", "month", "total"]});
-        //self.money_df = pd.DataFrame(columns=['equity', 'debt', 'gold', 'month', 'total'])
+        
     };
     
     // Coding the input commands as methods.
@@ -66,8 +68,8 @@ class commands{
       results["output"] = results["equity"].toString() + " " + results["debt"].toString() + " " + results["gold"].toString();
       res = results["output"].toArray();
 
-      for (var r, _pj_c = 0, _pj_a = res, _pj_b = _pj_a.length; _pj_c < _pj_b; _pj_c += 1) {
-        r = _pj_a[_pj_c];
+      for (var r, c = 0, a = res, b = a.length; c < b; c += 1) {
+        r = a[c];
         console.log(r);
       }
     } 
