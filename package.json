@@ -17,6 +17,7 @@
   "author": "\"Jesse-Bett (https://github.com/Jesse-Bett)",
   "license": "ISC",
   "dependencies": {
+    "danfojs": "^1.1.0",
     "fs": "^0.0.1-security"
   }
 }
