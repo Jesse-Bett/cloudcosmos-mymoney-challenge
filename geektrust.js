@@ -33,7 +33,7 @@ let reader = new FileReader();
         moneyObject.CHANGE( parseFloat(inputLine[1]).toFixed(2)+"%", // Change string to % float
                             parseFloat(inputLine[2]).toFixed(2)+"%", 
                             parseFloat(inputLine[3]).toFixed(2)+"%", 
-                            inputLine[4],monthCount) 
+                            inputLine[4],monthCount) //
       }
 
       else if (inputLine[0] == 'BALANCE'){
@@ -48,12 +48,3 @@ let reader = new FileReader();
   };
   reader.readAsText(inputFile);
 
-
-
-
-
-
-
-
-
-// Printing the output to the console.

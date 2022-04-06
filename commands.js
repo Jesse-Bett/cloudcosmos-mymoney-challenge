@@ -1,3 +1,10 @@
+class commands{
+    constructor(self,equity,debt,gold){
+        
+    }
+}
+
+
 
 // Coding the input commands as functions.
 
